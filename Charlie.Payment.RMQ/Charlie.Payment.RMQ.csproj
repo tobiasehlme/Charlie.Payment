@@ -4,13 +4,18 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-Charlie.Payment.RMQ.Sub-c51fa5c1-cc37-46d3-8ef8-b86476a333bf</UserSecretsId>
+    <UserSecretsId>dotnet-Charlie.Payment.RMQ-8dbcaf50-4ec7-465a-9fd1-62ca0e1fd454</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="RabbitMQ.Client" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Charlie.Payment.Service\Charlie.Payment.Service.csproj" />
+    <ProjectReference Include="..\Charlie.Payment.Shared\Charlie.Payment.Shared.csproj" />
   </ItemGroup>
 </Project>

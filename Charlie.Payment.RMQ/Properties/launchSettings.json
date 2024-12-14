@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Charlie.Payment.RMQ.Sub": {
+    "Charlie.Payment.RMQ": {
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
