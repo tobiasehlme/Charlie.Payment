@@ -16,7 +16,7 @@ jobs:
 
       # Step 2: Set Image Tag Name
       - name: Set Image Tag
-        run: echo "TAG_NAME=v$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
+        run: echo "TAG_NAME=latest" >> $GITHUB_ENV
 
       # Step 3: Log in to Docker Hub
       - name: Log in to Docker Hub
