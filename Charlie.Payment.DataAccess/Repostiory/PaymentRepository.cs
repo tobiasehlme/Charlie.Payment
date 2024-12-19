@@ -18,9 +18,9 @@ public class PaymentRepository : IPaymentRepository<PaymentModel>
         await _context.SaveChangesAsync();
     }
 
-    public async Task<PaymentModel> GetPaymentByOrderIdAsync(int id)
+    public async Task<PaymentModel> GetPaymentByOrderIdAsync(string id)
     {
-        return await _context.Payments.FirstOrDefaultAsync(x=>x.Id == id);
+        return await _context.Payments.FirstOrDefaultAsync(x=>x.OrderId == id);
     }
 
     public async Task<IEnumerable<PaymentModel>> GetPaymentsAsync()
@@ -34,7 +34,7 @@ public class PaymentRepository : IPaymentRepository<PaymentModel>
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeletePaymentAsync(int id)
+    public async Task DeletePaymentAsync(string id)
     {
         var payment = await GetPaymentByOrderIdAsync(id);
         if (payment != null)

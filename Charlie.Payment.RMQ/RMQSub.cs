@@ -66,7 +66,7 @@ public class RMQSub : BackgroundService
                         else if (operationType == "Read")
                         {
 
-                            var existingPayment = await _paymentService.GetPaymentByOrderIdAsync(payment.OrderId);
+                            var existingPayment = await _paymentService.GetPaymentByOrderIdAsync(payment.Id);
 
                             PaymentDTO paymentDTO = null;
                             string status = "Failed";

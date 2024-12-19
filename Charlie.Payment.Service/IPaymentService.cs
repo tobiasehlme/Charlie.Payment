@@ -9,7 +9,7 @@ public interface IPaymentService
     PaymentModel MapDTOToModel(PaymentDTO payment);
 
     Task<IEnumerable<PaymentModel>> GetPaymentsAsync();
-    Task<PaymentModel> GetPaymentByOrderIdAsync(int id);
+    Task<PaymentModel> GetPaymentByOrderIdAsync(string id);
 
     Task AddPaymentAsync(PaymentModel payment);
     Task UpdatePaymentAsync(PaymentModel payment);

@@ -46,7 +46,7 @@ public class PaymentService : IPaymentService
         return await _paymentRepository.GetPaymentsAsync();
     }
 
-    public async Task<PaymentModel> GetPaymentByOrderIdAsync(int id)
+    public async Task<PaymentModel> GetPaymentByOrderIdAsync(string id)
     {
         _logger.LogInformation($"Getting payment with id: {id}");
         return await _paymentRepository.GetPaymentByOrderIdAsync(id);
