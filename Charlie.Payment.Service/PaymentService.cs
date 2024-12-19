@@ -20,10 +20,12 @@ public class PaymentService : IPaymentService
     {
         return new PaymentDTO()
         {
-            Amount = payment.Amount,
-            OrderId = payment.OrderId,
-            ProcessedAt = payment.ProcessedAt,
-            Status = payment.Status
+            Id = payment.OrderId,
+            TotalPrice = payment.Amount,
+            CustomerId = "0",
+            CustomerName = "N/A",
+            ProductIds = new List<int>()
+
         };
     }
 
@@ -31,11 +33,10 @@ public class PaymentService : IPaymentService
     {
         return new PaymentModel()
         {
-            Id = Guid.NewGuid().GetHashCode(),
-            Amount = payment.Amount,
-            OrderId = payment.OrderId,
-            ProcessedAt = payment.ProcessedAt,
-            Status = payment.Status
+            OrderId = payment.Id,
+            Amount = payment.TotalPrice,
+            Status = "Pending",
+            ProcessedAt = DateTime.MinValue
         };
     }
 

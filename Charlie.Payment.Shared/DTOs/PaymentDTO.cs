@@ -2,8 +2,9 @@
 
 public class PaymentDTO
 {
-    public int OrderId { get; set; }
-    public decimal Amount { get; set; }
-    public string Status { get; set; }
-    public DateTime ProcessedAt { get; set; }
+    public string Id { get; set; }
+    public string CustomerId { get; set; }
+    public string CustomerName { get; set; }
+    public List<int> ProductIds { get; set; }
+    public decimal TotalPrice { get; set; }
 }

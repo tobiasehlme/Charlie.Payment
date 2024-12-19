@@ -20,7 +20,7 @@ public class PaymentRepository : IPaymentRepository<PaymentModel>
 
     public async Task<PaymentModel> GetPaymentByOrderIdAsync(int id)
     {
-        return await _context.Payments.FirstOrDefaultAsync(x=>x.OrderId == id);
+        return await _context.Payments.FirstOrDefaultAsync(x=>x.Id == id);
     }
 
     public async Task<IEnumerable<PaymentModel>> GetPaymentsAsync()
